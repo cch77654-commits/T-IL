@@ -1,1 +1,44 @@
+for문을 이용한 모두덧셈,곱셉, 최대,최소값 구하기
 
+// Main.c
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int num;
+	int sum = 0;
+	int gob = 1;
+	int max, min;
+	printf("숫자 5개 입력 : ");
+	for (i = 0; i < 5; i++) 
+	{
+		scanf("%d", &num);
+		sum += num;
+		gob *= num;
+		if (i == 0)
+		{
+			max = num;
+			min = num;
+		}
+		else
+		{
+			if(num > max)
+			{
+				max = num;
+			}
+			if(num < min)
+				
+			{
+				min = num;
+			}
+		}
+	}
+	printf("합 : %d\n", sum);
+	printf("곱 : %d\n", gob);
+	printf("최대 : %d\n", max);
+	printf("최소 : %d\n", min);
+	return 0;
+}
