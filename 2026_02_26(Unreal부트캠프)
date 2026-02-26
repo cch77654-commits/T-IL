@@ -1,0 +1,16 @@
+#include <stdio.h>
+void PrintOneStar()
+{
+	printf("*");
+}
+
+int main(void)
+{
+	PrintOneStar();
+
+	return 0;
+}
+
+
+확실히 2년동안 안해서 많이 까먹었다. 
+기초를 확실히 더 해야할 것 같다 .
