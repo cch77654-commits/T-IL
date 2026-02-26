@@ -1,12 +1,21 @@
 #include <stdio.h>
+
 void PrintOneStar()
 {
 	printf("*");
 }
+void Add(int a, int b)
+{
+	int sum = a + b;
+	printf(" 두 수의 합은 : %d ", sum);
+}
 
 int main(void)
 {
+	int a = 10;
+	int b = 20;
 	PrintOneStar();
+	Add(a, b);
 
 	return 0;
 }
