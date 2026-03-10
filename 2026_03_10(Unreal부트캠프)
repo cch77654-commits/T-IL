@@ -1,0 +1,25 @@
+{
+    this->nickname = nickname;
+의미
+
+전달받은 닉네임을 멤버 변수에 저장
+
+예
+
+입력: 철수
+
+결과
+
+nickname = 철수
+
+this 의미
+this->nickname
+
+현재 객체의 nickname 변수
+
+--> 자바에서의 this.nickname 과 쓰임새가 비슷하여 찾아봤다
+  Java vs C++ 차이
+구분	Java	C++
+현재 객체	this /	this
+접근 방식	this.	/ this->
+this 타입	객체 참조	/ 객체 포인터
