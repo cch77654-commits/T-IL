@@ -1,0 +1,8 @@
+오류가 났던 대부분의 원인이 오타였다 ...
+특히 변수명을 자주 틀린다 예를들어 Power 를 ㅔㅐㅈㄷㄱ 나 power(소문자) 등등
+
+int Monster::getPowwer()
+{
+	return Power;
+}
+실제로 이렇게 작성해서 에러가 났다 머쓱
