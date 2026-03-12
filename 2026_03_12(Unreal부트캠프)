@@ -1,0 +1,146 @@
+한창민 튜터님의 예시가 제일 와닿았던것 같습니다 .
+다형성이 없다면 어떤식의 코드가 될까요? 아래코드 처럼 됩니다.
+
+#include <iostream>
+
+using namespace std;
+
+class Dog
+{
+public:
+    void Speak()
+    {
+        cout << "Dog Bark" << endl;
+    }
+};
+
+class Cat
+{
+public:
+    void Speak()
+    {
+        cout << "Cat Meow" << endl;
+    }
+};
+
+class Cow
+{
+public:
+    void Speak()
+    {
+        cout << "Cow Moo" << endl;
+    }
+};
+
+class Bird
+{
+public:
+    void Speak()
+    {
+        cout << "Bird Chirp" << endl;
+    }
+};
+
+int main()
+{
+    Dog dogs[2];
+    Cat cats[2];
+    Cow cows[2];
+    Bird birds[2];
+
+    for (int i = 0; i < 2; i++)
+    {
+        dogs[i].Speak();
+    }
+
+    for (int i = 0; i < 2; i++)
+    {
+        cats[i].Speak();
+    }
+
+    for (int i = 0; i < 2; i++)
+    {
+        cows[i].Speak();
+    }
+
+    for (int i = 0; i < 2; i++)
+    {
+        birds[i].Speak();
+    }
+
+    return 0;
+}
+
+자~! 그렇다면 다형성을 구현하면 반복문과 하나의 자료형 타입으로 자료구조로 구현이 가능합니다.
+
+#include <iostream>
+
+using namespace std;
+
+class Animal
+{
+public:
+    virtual void Speak()
+    {
+        cout << "Animal Sound" << endl;
+    }
+};
+
+class Dog : public Animal
+{
+public:
+    void Speak() override
+    {
+        cout << "Dog Bark" << endl;
+    }
+};
+
+class Cat : public Animal
+{
+public:
+    void Speak() override
+    {
+        cout << "Cat Meow" << endl;
+    }
+};
+
+class Cow : public Animal
+{
+public:
+    void Speak() override
+    {
+        cout << "Cow Moo" << endl;
+    }
+};
+
+class Bird : public Animal
+{
+public:
+    void Speak() override
+    {
+        cout << "Bird Chirp" << endl;
+    }
+};
+
+int main()
+{
+    Animal* animals[8];
+
+    animals[0] = new Dog();
+    animals[1] = new Dog();
+
+    animals[2] = new Cat();
+    animals[3] = new Cat();
+
+    animals[4] = new Cow();
+    animals[5] = new Cow();
+
+    animals[6] = new Bird();
+    animals[7] = new Bird();
+
+    for (int i = 0; i < 8; i++)
+    {
+        animals[i]->Speak();
+    }
+
+    return 0;
